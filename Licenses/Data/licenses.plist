@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>title</key>
-			<string>Appirater</string>
+			<string>Appirater (Arash Payan)</string>
 			<key>url</key>
 			<string>https://github.com/arashpayan/appirater.git</string>
 			<key>license</key>
@@ -14,7 +14,7 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>AppsPortfolio</string>
+			<string>AppsPortfolio (Mahmud Ahsan)</string>
 			<key>url</key>
 			<string>https://github.com/mahmudahsan/AppsPortfolio</string>
 			<key>license</key>
@@ -22,7 +22,7 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>iVersion</string>
+			<string>iVersion (Charcoal Design)</string>
 			<key>url</key>
 			<string>https://github.com/nicklockwood/iVersion</string>
 			<key>license</key>
@@ -30,7 +30,7 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>MBProgressHUD</string>
+			<string>MBProgressHUD (Matej Bukovinski)</string>
 			<key>url</key>
 			<string>https://github.com/matej/MBProgressHUD.git</string>
 			<key>license</key>
@@ -38,7 +38,7 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Reachability</string>
+			<string>Reachability (Tony Million)</string>
 			<key>url</key>
 			<string>https://github.com/tonymillion/Reachability</string>
 			<key>license</key>
@@ -46,7 +46,7 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Realm</string>
+			<string>Realm (Realm Authors)</string>
 			<key>url</key>
 			<string>https://github.com/realm/realm-cocoa.git</string>
 			<key>license</key>
