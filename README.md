@@ -13,14 +13,18 @@
         <img src="https://img.shields.io/badge/contact%40-mahmudahsan-green.svg" alt="Twitter: @mahmudahsan" />
     </a>
 </p>
+<p>
 Quick way to showcase 3rd party libraries and their licenses those are used to develop app.
 Most of the open source license's common terms is that 
 "The above copyright notice and this permission notice shall be included in all
  copies or substantial portions of the Software."
- <br />
+</p>
+<p>
 As normally when we develop app, we use several open source libraries. So this property list based UI library will help to easily integrate to showcase them in part of the app.
- 
+</p>
+<p>
 The UI is table view with 2 sections. First section contains the list of libraries details ( name, url, license ). And the second section contains the licenses name and urls.
+</p>
  
  <p align="center">
     <img src="preview.gif" width="320" alt="Licenses Preview" />
