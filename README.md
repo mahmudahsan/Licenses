@@ -104,7 +104,7 @@ Either
 
 or
 
-- Use CocoaPods or the Swift Package manager to include AppsPortfolio as a dependency in your project.
+- Use CocoaPods or the Swift Package manager to include Licenses as a dependency in your project.
 
 ```Ruby
 pod 'Licenses', :git => 'https://github.com/mahmudahsan/Licenses'
