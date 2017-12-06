@@ -17,8 +17,7 @@ Quick way to showcase 3rd party libraries and their licenses those are used to d
 Most of the open source license's common terms is that 
 "The above copyright notice and this permission notice shall be included in all
  copies or substantial portions of the Software."
- 
- 
+ <br />
 As normally when we develop app, we use several open source libraries. So this property list based UI library will help to easily integrate to showcase them in part of the app.
  
 The UI is table view with 2 sections. First section contains the list of libraries details ( name, url, license ). And the second section contains the licenses name and urls.
