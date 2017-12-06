@@ -27,7 +27,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func showLicenseUI(_ sender: Any) {
-        let bundle = Bundle(for: License.self)
+        let bundle = Bundle(for: LicensesViewController.self)
         let storyboard = UIStoryboard(name: "Licenses", bundle: bundle)
         
         let licenseVC = storyboard.instantiateInitialViewController() as! LicensesViewController
