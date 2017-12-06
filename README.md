@@ -109,6 +109,10 @@ or
 ```Ruby
 pod 'Licenses', :git => 'https://github.com/mahmudahsan/Licenses'
 ```
+or
+```Ruby
+pod 'Licenses'
+```
 
 * In your project create a new **licenses.plist** file and supply the libraries name, urls and licenses. Follow the licenses.plist file format provided in Licenses/Data.
 
