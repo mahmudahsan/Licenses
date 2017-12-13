@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bCf-ri-iu3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bCf-ri-iu3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,11 +42,25 @@
                                     <action selector="showLicenseUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vg9-qQ-fXd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10L-Rz-ifc">
+                                <rect key="frame" x="81" y="359" width="213" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Xic-iZ-hDF"/>
+                                    <constraint firstAttribute="width" constant="213" id="sjt-t2-WdL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Licenses &amp; Ref Url"/>
+                                <connections>
+                                    <action selector="showLicenseUIURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ao-Oo-fnw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oNQ-io-RJu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4qZ-Du-je5"/>
                             <constraint firstItem="oNQ-io-RJu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DmC-GM-dpg"/>
+                            <constraint firstItem="10L-Rz-ifc" firstAttribute="top" secondItem="oNQ-io-RJu" secondAttribute="bottom" constant="8" id="H5u-gW-1sH"/>
+                            <constraint firstItem="10L-Rz-ifc" firstAttribute="centerX" secondItem="oNQ-io-RJu" secondAttribute="centerX" id="s1X-Cy-T2f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

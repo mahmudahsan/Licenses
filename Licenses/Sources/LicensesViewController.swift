@@ -24,9 +24,9 @@
 
 import UIKit
 
-enum Section : Int{
-    case library
-    case license
+public enum LicensesViewStyle{
+    case URL
+    case DESC
 }
 
 //https://stackoverflow.com/questions/24263007/how-to-use-hex-colour-values
@@ -45,10 +45,9 @@ public class LicensesViewController: UIViewController, UITableViewDataSource, UI
     @IBOutlet weak var tableView: UITableView!
     
     var license:License = License()
+    var licenseViewStyle:LicensesViewStyle = .DESC
     
     public var analytics:Analytics?
-    public var sectionLibraryTitle = "Licenses"
-    public var sectionLicenseTitle = "License Terms"
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -61,44 +60,21 @@ public class LicensesViewController: UIViewController, UITableViewDataSource, UI
         super.didReceiveMemoryWarning()
     }
     
-    public func loadLicenseList(name: String){
+    public func loadLicenseList(name: String, viewStyle: LicensesViewStyle){
+        licenseViewStyle = viewStyle
         license.loadLibraryAndLicenseList(listName: name)
     }
     
     public func numberOfSections(in tableView: UITableView) -> Int {
-        var section = 1
-        if let licenseList = license.licenseList {
-            if licenseList.count > 0 {
-                section = section + 1
-            }
-        }
-        return section
+        return 1
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rows = 0
-        if section == Section.library.rawValue {
-            if let libraryList = license.libraryList {
-                rows = libraryList.count
-            }
-        }
-        else if section == Section.license.rawValue {
-            if let licenseList = license.licenseList {
-                rows = rows + licenseList.count
-            }
+        if let libraryList = license.libraryList {
+            rows = libraryList.count
         }
         return rows
-    }
-    
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var title = ""
-        if section == Section.library.rawValue {
-            title = sectionLibraryTitle
-        }
-        else if section == Section.license.rawValue {
-            title = sectionLicenseTitle
-        }
-        return title
     }
 
     public func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -115,24 +91,14 @@ public class LicensesViewController: UIViewController, UITableViewDataSource, UI
             cell = bundle.loadNibNamed("LicensesTableViewCell", owner: self, options: nil)?[0] as? LicensesTableViewCell
         }
         
-        if indexPath.section == Section.library.rawValue {
-            //libraries
-            let libraryItem    = license.libraryList?.object(at: indexPath.row) as? NSDictionary
-            let title    = libraryItem?.value(forKey: "title") as? String
-            let licenseT = libraryItem?.value(forKey: "license") as? String
-            
-            cell?.title.text = title
-            cell?.subtitle.text = licenseT
-            cell?.title.textColor = UIColor.black
-        }
-        else if indexPath.section == Section.license.rawValue {
-            let licenseItem    = license.licenseList?.object(at: indexPath.row) as? NSDictionary
-            let title    = licenseItem?.value(forKey: "title") as? String
-            
-            cell?.title.text = title
-            cell?.subtitle.text = ""
-            cell?.title.textColor = UIColor.init(hex: 0x1D79C1)
-        }
+        //libraries
+        let libraryItem    = license.libraryList?.object(at: indexPath.row) as? NSDictionary
+        let title    = libraryItem?.value(forKey: "title") as? String
+        let licenseT = libraryItem?.value(forKey: "license") as? String
+        
+        cell?.title.text = title
+        cell?.subtitle.text = licenseT
+        cell?.title.textColor = UIColor.black
         
         return cell!
     }
@@ -140,18 +106,25 @@ public class LicensesViewController: UIViewController, UITableViewDataSource, UI
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if indexPath.section == Section.library.rawValue {
-            let libraryItem    = license.libraryList?.object(at: indexPath.row) as? NSDictionary
-            let title          = libraryItem?.value(forKey: "title") as? String
-            let url            = libraryItem?.value(forKey: "url") as? String
+        let libraryItem    = license.libraryList?.object(at: indexPath.row) as? NSDictionary
+        let title          = libraryItem?.value(forKey: "title") as? String
+        let url            = libraryItem?.value(forKey: "url") as? String
+        let desc           = libraryItem?.value(forKey: "desc") as? String
+        
+        if licenseViewStyle == .DESC {
+            showLicenseDesc(title: title, desc: desc ?? "")
+        }
+        else {
             openUrl(title: title, url: url)
         }
-        else if indexPath.section == Section.license.rawValue {
-            let licenseItem    = license.licenseList?.object(at: indexPath.row) as? NSDictionary
-            let title          = licenseItem?.value(forKey: "title") as? String
-            let url            = licenseItem?.value(forKey: "url") as? String
-            openUrl(title: title, url: url)
-        }
+    }
+    
+    func showLicenseDesc(title: String?, desc:String){
+        let alert = UIAlertController(title: title, message: desc, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:{ (ACTION :UIAlertAction!)in
+            //println("User click Ok button")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func openUrl(title:String?, url:String?){

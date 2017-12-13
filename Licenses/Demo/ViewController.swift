@@ -32,10 +32,22 @@ class ViewController: UIViewController {
         
         let licenseVC = storyboard.instantiateInitialViewController() as! LicensesViewController
         licenseVC.title = "Licenses"
-        licenseVC.loadLicenseList(name: "licenses")
+        licenseVC.loadLicenseList(name: "licenses", viewStyle: .DESC)
         licenseVC.analytics = self
         self.navigationController?.pushViewController(licenseVC, animated: true)
     }
+    
+    @IBAction func showLicenseUIURL(_ sender: Any) {
+        let bundle = Bundle(for: LicensesViewController.self)
+        let storyboard = UIStoryboard(name: "Licenses", bundle: bundle)
+        
+        let licenseVC = storyboard.instantiateInitialViewController() as! LicensesViewController
+        licenseVC.title = "Licenses"
+        licenseVC.loadLicenseList(name: "licenses", viewStyle: .URL)
+        licenseVC.analytics = self
+        self.navigationController?.pushViewController(licenseVC, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

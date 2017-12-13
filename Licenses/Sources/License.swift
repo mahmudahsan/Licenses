@@ -38,19 +38,11 @@ struct LibDetail{
     var title:String
     var license:String
     var url:String
-}
-
-/**
- *  LibLicenseDetail is used for specify license detail
- */
-struct LicenseDetail{
-    var title:String
-    var url:String
+    var desc:String
 }
 
 class License{
     var libraryList:NSArray?
-    var licenseList:NSArray?
     
     /**
      *  Read raw .plist formatted data and assigned in portfolioList
@@ -71,11 +63,5 @@ class License{
             return
         }
         libraryList = arr
-        
-        guard let arr2 = libListDict?.object(forKey: "licenses") as? NSArray else {
-            licenseList = nil
-            return
-        }
-        licenseList = arr2
     }
 }
