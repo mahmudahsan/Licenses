@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Licenses"
-  s.version      = "1.0.0"
+  s.version      = "2.0"
   s.summary      = "To showcase 3rd party libraries and their licenses"
   s.description  = <<-DESC
       Quick way to showcase 3rd party libraries and their licenses those are used to develop app.

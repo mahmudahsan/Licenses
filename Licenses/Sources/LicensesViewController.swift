@@ -120,6 +120,10 @@ public class LicensesViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func showLicenseDesc(title: String?, desc:String){
+        if let title = title {
+            analytics?.libraryClicked(libName: title)
+        }
+        
         let alert = UIAlertController(title: title, message: desc, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:{ (ACTION :UIAlertAction!)in
             //println("User click Ok button")

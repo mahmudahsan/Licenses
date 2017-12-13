@@ -23,11 +23,12 @@ Most of the open source license's common terms is that
 As normally when we develop app, we use several open source libraries. So this property list based UI library will help to easily integrate to showcase them in part of the app.
 </p>
 <p>
-The UI is table view with 2 sections. First section contains the list of libraries details ( name, url, license ). And the second section contains the licenses name and urls.
+There are 2 ways to show credits by this library. If you selected .DESC style, then the license description provided by you will be shown. And .URL style, the url will be redirected when user click to see the license.
 </p>
  
  <p align="center">
-    <img src="preview.gif" width="320" alt="Licenses Preview" />
+    <img src="preview1.gif" width="320" alt="Licenses Preview" />
+    <img src="preview2.gif" width="320" alt="Licenses Preview" />
 </p>	
 
 ## Features
@@ -35,9 +36,10 @@ The UI is table view with 2 sections. First section contains the list of librari
 - [X] Showcase open source libraries name with licenses
 - [X] Property List (.plist) based data integration
 - [X] Delegate to integrate analytics
+- [X] Show license description or open url (2 ways)
 - [X] Works in iOS apps 
 
-## Examples
+## Examples Show Description
 
 Integrate within a UIViewController:
 ```swift
@@ -46,7 +48,21 @@ let storyboard = UIStoryboard(name: "Licenses", bundle: bundle)
 
 let licenseVC = storyboard.instantiateInitialViewController() as! LicensesViewController
 licenseVC.title = "Licenses"
-licenseVC.loadLicenseList(name: "licenses") // without .plist extension
+licenseVC.loadLicenseList(name: "licenses", viewStyle: .DESC) // without .plist extension
+//licenseVC.analytics = self 
+self.navigationController?.pushViewController(licenseVC, animated: true)
+```
+
+## Examples Open Url
+
+Integrate within a UIViewController:
+```swift
+let bundle = Bundle(for: LicensesViewController.self)
+let storyboard = UIStoryboard(name: "Licenses", bundle: bundle)
+
+let licenseVC = storyboard.instantiateInitialViewController() as! LicensesViewController
+licenseVC.title = "Licenses"
+licenseVC.loadLicenseList(name: "licenses", viewStyle: .URL) // without .plist extension
 //licenseVC.analytics = self 
 self.navigationController?.pushViewController(licenseVC, animated: true)
 ```
@@ -66,6 +82,9 @@ licenses.plist file structure:
 			<string>https://github.com/arashpayan/appirater.git</string>
 			<key>license</key>
 			<string>MIT License</string>
+      <key>desc</key>
+			<string>Copyright 2017. [Arash Payan] arash. This library is distributed under the terms of the MIT/X11.
+While not required, I greatly encourage and appreciate any improvements that you make to this library be contributed back for the benefit of all who use Appirater.</string>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -74,21 +93,9 @@ licenses.plist file structure:
 			<string>https://github.com/mahmudahsan/AppsPortfolio</string>
 			<key>license</key>
 			<string>MIT License</string>
+      <key>desc</key>
+			<string>...</string>
 		</dict>
-	</array>
-	<key>licenses</key>
-	<array>
-		<dict>
-			<key>title</key>
-			<string>MIT License</string>
-			<key>url</key>
-			<string>https://opensource.org/licenses/MIT</string>
-		</dict>
-		<dict>
-			<key>title</key>
-			<string>Zlib License</string>
-			<key>url</key>
-			<string>https://opensource.org/licenses/Zlib</string>
 		</dict>
 	</array>
 </dict>
