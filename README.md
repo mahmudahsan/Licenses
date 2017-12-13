@@ -4,7 +4,7 @@
         <img src="https://img.shields.io/cocoapods/p/AppsPortfolio.svg?style=flat" alt="CocoaPods" />
     </a>
     <a href="https://cocoapods.org/pods/Licenses">
-        <img src="https://img.shields.io/badge/pods-v1.0.0-orange.svg" alt="CocoaPods" />
+        <img src="https://img.shields.io/badge/pods-v2.0-orange.svg" alt="CocoaPods" />
     </a>
     <a href="https://swift.org/package-manager">
         <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
