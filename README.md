@@ -3,6 +3,7 @@
     <a href="https://cocoapods.org/pods/Licenses">
         <img src="https://img.shields.io/cocoapods/p/AppsPortfolio.svg?style=flat" alt="CocoaPods" />
     </a>
+    <img src="https://img.shields.io/badge/Swift-4.0-orange.svg" alt="swift 4.0" />
     <a href="https://cocoapods.org/pods/Licenses">
         <img src="https://img.shields.io/badge/pods-v2.0-orange.svg" alt="CocoaPods" />
     </a>
