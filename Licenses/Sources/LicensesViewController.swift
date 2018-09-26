@@ -124,8 +124,8 @@ public class LicensesViewController: UIViewController, UITableViewDataSource, UI
             analytics?.libraryClicked(libName: title)
         }
         
-        let alert = UIAlertController(title: title, message: desc, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:{ (ACTION :UIAlertAction!)in
+        let alert = UIAlertController(title: title, message: desc, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler:{ (ACTION :UIAlertAction!)in
             //println("User click Ok button")
         }))
         self.present(alert, animated: true, completion: nil)
@@ -136,7 +136,12 @@ public class LicensesViewController: UIViewController, UITableViewDataSource, UI
             analytics?.libraryClicked(libName: title)
         }
         if let url = url {
-            UIApplication.shared.openURL(NSURL(string : url)! as URL)
+            UIApplication.shared.open(NSURL(string : url)! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

@@ -35,21 +35,18 @@ class LicensesTests: XCTestCase {
         let license = License()
         license.loadLibraryAndLicenseList(listName: nil)
         XCTAssertNil(license.libraryList)
-        XCTAssertNil(license.licenseList)
     }
     
     func testLicenseDataFromWrongPlist(){
         let license = License()
         license.loadLibraryAndLicenseList(listName: "NO_PLIST")
         XCTAssertNil(license.libraryList)
-        XCTAssertNil(license.licenseList)
     }
     
     func testLicenseDataFromSamplePlist(){
         let license = License()
         license.loadLibraryAndLicenseList(listName: sampleLicense)
-        XCTAssert(license.libraryList?.count == 6)
-        XCTAssert(license.licenseList?.count == 4)
+        XCTAssert(license.libraryList?.count == 7)
     }
     
     func testLicenseDataLibraryListFirstItemDetail(){
@@ -70,11 +67,11 @@ class LicensesTests: XCTestCase {
         let license = License()
         license.loadLibraryAndLicenseList(listName: sampleLicense)
         
-        let itemArray   = license.licenseList![0] as? NSDictionary
+        let itemArray   = license.libraryList![0] as? NSDictionary
         let title       = itemArray?.value(forKey: "title") as! String
         let url         = itemArray?.value(forKey: "url") as! String
         
-        XCTAssertEqual(title, "MIT License")
-        XCTAssertEqual(url, "https://opensource.org/licenses/MIT")
+        XCTAssertEqual(title, "Appirater")
+        XCTAssertEqual(url, "https://github.com/arashpayan/appirater.git")
     }
 }
