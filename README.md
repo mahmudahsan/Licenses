@@ -1,4 +1,5 @@
 # Licenses
+
 <p align="center">
     <a href="https://cocoapods.org/pods/Licenses">
         <img src="https://img.shields.io/cocoapods/p/AppsPortfolio.svg?style=flat" alt="CocoaPods" />
@@ -30,19 +31,20 @@ There are 2 ways to show credits by this library. If you selected .DESC style, t
  <p align="center">
     <img src="preview1.gif" width="320" alt="Licenses Preview" />
     <img src="preview2.gif" width="320" alt="Licenses Preview" />
-</p>	
+</p>
 
 ## Features
 
-- [X] Showcase open source libraries name with licenses
-- [X] Property List (.plist) based data integration
-- [X] Delegate to integrate analytics
-- [X] Show license description or open url (2 ways)
-- [X] Works in iOS apps 
+- [x] Showcase open source libraries name with licenses
+- [x] Property List (.plist) based data integration
+- [x] Delegate to integrate analytics
+- [x] Show license description or open url (2 ways)
+- [x] Works in iOS apps
 
 ## Examples Show Description
 
 Integrate within a UIViewController:
+
 ```swift
 let bundle = Bundle(for: LicensesViewController.self)
 let storyboard = UIStoryboard(name: "Licenses", bundle: bundle)
@@ -50,13 +52,14 @@ let storyboard = UIStoryboard(name: "Licenses", bundle: bundle)
 let licenseVC = storyboard.instantiateInitialViewController() as! LicensesViewController
 licenseVC.title = "Licenses"
 licenseVC.loadLicenseList(name: "licenses", viewStyle: .DESC) // without .plist extension
-//licenseVC.analytics = self 
+//licenseVC.analytics = self
 self.navigationController?.pushViewController(licenseVC, animated: true)
 ```
 
 ## Examples Open Url
 
 Integrate within a UIViewController:
+
 ```swift
 let bundle = Bundle(for: LicensesViewController.self)
 let storyboard = UIStoryboard(name: "Licenses", bundle: bundle)
@@ -64,11 +67,12 @@ let storyboard = UIStoryboard(name: "Licenses", bundle: bundle)
 let licenseVC = storyboard.instantiateInitialViewController() as! LicensesViewController
 licenseVC.title = "Licenses"
 licenseVC.loadLicenseList(name: "licenses", viewStyle: .URL) // without .plist extension
-//licenseVC.analytics = self 
+//licenseVC.analytics = self
 self.navigationController?.pushViewController(licenseVC, animated: true)
 ```
 
 licenses.plist file structure:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -108,22 +112,17 @@ While not required, I greatly encourage and appreciate any improvements that you
 
 Either
 
-- Drag the folders Licenses/Sources folder into your application's Xcode project. 
+- Drag the folders Licenses/Sources folder into your application's Xcode project.
 
 or
 
-- Use CocoaPods or the Swift Package manager to include Licenses as a dependency in your project.
+- Use Swift Package manager to include Licenses as a dependency in your project.
 
 ```Ruby
 pod 'Licenses', :git => 'https://github.com/mahmudahsan/Licenses'
 ```
-or
-```Ruby
-pod 'Licenses'
-```
 
-* In your project create a new **licenses.plist** file and supply the libraries name, urls and licenses. Follow the licenses.plist file format provided in Licenses/Data.
-
+- In your project create a new **licenses.plist** file and supply the libraries name, urls and licenses. Follow the licenses.plist file format provided in Licenses/Data.
 
 ## Questions or feedback?
 

@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		514DC849297BD09B00AF550B /* Licenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514DC845297BD09B00AF550B /* Licenses.storyboard */; };
+		514DC84A297BD09B00AF550B /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DC846297BD09B00AF550B /* LicensesViewController.swift */; };
+		514DC84B297BD09B00AF550B /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DC847297BD09B00AF550B /* License.swift */; };
+		514DC84C297BD09B00AF550B /* LicensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DC848297BD09B00AF550B /* LicensesTableViewCell.swift */; };
 		516CDB331FD6C9000090BCC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDB321FD6C9000090BCC0 /* AppDelegate.swift */; };
 		516CDB351FD6C9000090BCC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDB341FD6C9000090BCC0 /* ViewController.swift */; };
 		516CDB381FD6C9000090BCC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516CDB361FD6C9000090BCC0 /* Main.storyboard */; };
 		516CDB3A1FD6C9000090BCC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516CDB391FD6C9000090BCC0 /* Assets.xcassets */; };
 		516CDB3D1FD6C9000090BCC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516CDB3B1FD6C9000090BCC0 /* LaunchScreen.storyboard */; };
 		516CDB481FD6C9000090BCC0 /* LicensesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDB471FD6C9000090BCC0 /* LicensesTests.swift */; };
-		516CDB561FD6CAD00090BCC0 /* LicensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDB551FD6CAD00090BCC0 /* LicensesViewController.swift */; };
-		516CDB581FD6CAE00090BCC0 /* Licenses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 516CDB571FD6CAE00090BCC0 /* Licenses.storyboard */; };
-		516CDB5A1FD6D1C60090BCC0 /* LicensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDB591FD6D1C60090BCC0 /* LicensesTableViewCell.swift */; };
-		516CDB5C1FD6D52F0090BCC0 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516CDB5B1FD6D52F0090BCC0 /* License.swift */; };
 		516CDB5E1FD6D7410090BCC0 /* licenses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 516CDB5D1FD6D7410090BCC0 /* licenses.plist */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		514DC845297BD09B00AF550B /* Licenses.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Licenses.storyboard; sourceTree = "<group>"; };
+		514DC846297BD09B00AF550B /* LicensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
+		514DC847297BD09B00AF550B /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		514DC848297BD09B00AF550B /* LicensesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensesTableViewCell.swift; sourceTree = "<group>"; };
 		516CDB2F1FD6C9000090BCC0 /* Licenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Licenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		516CDB321FD6C9000090BCC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		516CDB341FD6C9000090BCC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,10 +45,6 @@
 		516CDB431FD6C9000090BCC0 /* LicensesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LicensesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		516CDB471FD6C9000090BCC0 /* LicensesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesTests.swift; sourceTree = "<group>"; };
 		516CDB491FD6C9000090BCC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		516CDB551FD6CAD00090BCC0 /* LicensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesViewController.swift; sourceTree = "<group>"; };
-		516CDB571FD6CAE00090BCC0 /* Licenses.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Licenses.storyboard; sourceTree = "<group>"; };
-		516CDB591FD6D1C60090BCC0 /* LicensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesTableViewCell.swift; sourceTree = "<group>"; };
-		516CDB5B1FD6D52F0090BCC0 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		516CDB5D1FD6D7410090BCC0 /* licenses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = licenses.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		514DC844297BD09B00AF550B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				514DC845297BD09B00AF550B /* Licenses.storyboard */,
+				514DC846297BD09B00AF550B /* LicensesViewController.swift */,
+				514DC847297BD09B00AF550B /* License.swift */,
+				514DC848297BD09B00AF550B /* LicensesTableViewCell.swift */,
+			);
+			name = Sources;
+			path = ../../Sources;
+			sourceTree = "<group>";
+		};
 		516CDB261FD6C9000090BCC0 = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +98,8 @@
 		516CDB311FD6C9000090BCC0 /* Licenses */ = {
 			isa = PBXGroup;
 			children = (
+				514DC844297BD09B00AF550B /* Sources */,
 				516CDB541FD6C9A00090BCC0 /* Demo */,
-				516CDB531FD6C9950090BCC0 /* Sources */,
 				516CDB521FD6C98E0090BCC0 /* Data */,
 				516CDB391FD6C9000090BCC0 /* Assets.xcassets */,
 				516CDB3B1FD6C9000090BCC0 /* LaunchScreen.storyboard */,
@@ -112,17 +124,6 @@
 				516CDB5D1FD6D7410090BCC0 /* licenses.plist */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		516CDB531FD6C9950090BCC0 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				516CDB5B1FD6D52F0090BCC0 /* License.swift */,
-				516CDB551FD6CAD00090BCC0 /* LicensesViewController.swift */,
-				516CDB591FD6D1C60090BCC0 /* LicensesTableViewCell.swift */,
-				516CDB571FD6CAE00090BCC0 /* Licenses.storyboard */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		516CDB541FD6C9A00090BCC0 /* Demo */ = {
@@ -220,9 +221,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				516CDB581FD6CAE00090BCC0 /* Licenses.storyboard in Resources */,
 				516CDB5E1FD6D7410090BCC0 /* licenses.plist in Resources */,
 				516CDB3D1FD6C9000090BCC0 /* LaunchScreen.storyboard in Resources */,
+				514DC849297BD09B00AF550B /* Licenses.storyboard in Resources */,
 				516CDB3A1FD6C9000090BCC0 /* Assets.xcassets in Resources */,
 				516CDB381FD6C9000090BCC0 /* Main.storyboard in Resources */,
 			);
@@ -242,11 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				516CDB561FD6CAD00090BCC0 /* LicensesViewController.swift in Sources */,
+				514DC84A297BD09B00AF550B /* LicensesViewController.swift in Sources */,
 				516CDB351FD6C9000090BCC0 /* ViewController.swift in Sources */,
 				516CDB331FD6C9000090BCC0 /* AppDelegate.swift in Sources */,
-				516CDB5C1FD6D52F0090BCC0 /* License.swift in Sources */,
-				516CDB5A1FD6D1C60090BCC0 /* LicensesTableViewCell.swift in Sources */,
+				514DC84B297BD09B00AF550B /* License.swift in Sources */,
+				514DC84C297BD09B00AF550B /* LicensesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
